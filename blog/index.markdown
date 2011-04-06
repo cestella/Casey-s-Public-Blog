@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: blog
 title: Home
 section: Home
 
-feed: atom.xml
 keywords: Blog, Programming, Machine Learning
 ---
 
@@ -13,11 +12,6 @@ Casey's Technical Ramblings
 This is a place where I attempt to form coherent thoughts about current
 technology, computer science, some math and the general things happening
 on the Internet.  Enjoy!
-
-[![Feed icon](/files/css/feed-icon-14x14.png){:title="Atom feed of recent posts" .right}][feed]
-A [feed][] of the most recent posts is available.
-
-[feed]: /blog/atom.xml
 
 Recent Posts
 ------------
