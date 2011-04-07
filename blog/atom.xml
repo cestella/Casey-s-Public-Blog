@@ -13,7 +13,7 @@ layout: nil
    <name>Casey Stella</name>
  </author>
  
- {% for post in site.categories.sap limit:5 %}
+ {% for post in site.categories.blog limit:5 %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="http://www.caseystella.com{{ post.url }}"/>
