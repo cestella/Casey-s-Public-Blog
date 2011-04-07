@@ -185,7 +185,7 @@ ul.compact li { list-style: ;
 }
 ul.compact li span.date {	
 	display: none;
-	color: grey;
+	color: black;
 	width: 20%;
 }
 ul.compact li a {

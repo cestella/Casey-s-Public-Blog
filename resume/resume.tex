@@ -1,0 +1,134 @@
+%______________________________________________________________________________________________________________________
+% @brief    LaTeX2e Resume for Casey Stella
+\documentclass[margin,line,12pt]{resume}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyfoot{}
+
+\setlength{\headheight}{15pt}
+
+\fancyhead[CO, CE]{Casey Stella}
+\fancyfoot[RO, LE]{\thepage}
+
+%______________________________________________________________________________________________________________________
+\begin{document}
+\name{\Large Casey Stella}
+\begin{resume}
+    \thispagestyle{empty}
+    %__________________________________________________________________________________________________________________
+    % Contact Information
+    \section{\mysidestyle Contact\\Information}
+
+    Address Available             \vspace{0mm}\\\vspace{0mm}%
+    Upon Request                  \hfill e-mail: cestella@gmail.com       \vspace{0mm}\\\vspace{-4.5mm}%
+
+    %__________________________________________________________________________________________________________________
+    % Professional Experience
+    \section{\mysidestyle Professional\\Experience}
+
+    \textbf{Explorys}, Cleveland, OH \vspace{2mm}\\\vspace{1mm}%
+    \textsl{Senior Engineer} \hfill \textbf{January 2011 -- Present}\\
+    Design and implement software to assist in the gathering, preprocessing
+    and analysis of data from hospitals
+    \begin{list2}
+    \item Proficiency with modern natural language processing and general machine learning techniques and approaches
+    \item Experience with Hadoop and HBase
+    \end{list2}
+
+    \textbf{Game Communications}, Mayfield Heights, OH \vspace{2mm}\\\vspace{1mm}%
+    \textsl{Senior Engineer} \hfill \textbf{November 2009 -- January 2011}\\
+    Designed, implemented and integrated into legacy code a scalable network infrastructure layer for an instant message and VOIP network
+    \begin{list2}
+    \item Created a software routing layer and implementing an ordered, reliable protocol on top of the raw network layer
+    \item Integrated Cassandra as a distributed persistent metadata store to provide metadata resolution for network entities on the network
+    \item Created low-level network libraries in C++ and C\# to send messages across network
+    \item Spearheaded institution of pair-programming and semi-agile practices
+    \end{list2}
+
+    \textbf{ION Geophysical}, Houston, TX \vspace{2mm}\\\vspace{1mm}%
+    \textsl{Research Geophysicist} \hfill \textbf{October 2008 -- November 2009}\\
+    Member of the time processing R\&D team, tasked to design, prototype and implement production-ready algorithms to use applied math and signal processing to reduce noise in seismic data.  This was a telecommuting position from Cleveland, OH.
+    \begin{list2}
+    \item Implemented multithreaded C++ applied linear algebra library consisting of efficient STL-compliant data structures and algorithms to assist in signal processing
+    \item Assisted in the design and implementation of an internal flow-based map-reduce system for doing distributed scientific computation
+    \item Used Tokyo Cabinet to provide an on-disk index of seismic metadata in an efficient way
+    \item Implemented a multidimensional least squares adaptive filter that decreased wall-clock time for our most common seismic task by an order of magnitude
+    \item Developed a fixed-precision algorithm in C for the embedded PowerPC 405 platform which uses first-order statistics to differentiate noise from initial signal in an accurate, efficient and robust way
+    \item Spearheaded institution of pair-programming and semi-agile practices in a geographically dispersed environment
+    \end{list2}
+
+    \newpage
+    \vspace*{1mm}
+    
+    \textbf{Oracle}, Cleveland, OH \vspace{2mm}\\\vspace{1mm}%
+    \textsl{Senior Member of Technical Staff} \hfill \textbf{October 2005 -- October 2008}\\
+    Member of the Oracle Enterprise Repository team.  We provided an enterprise J2EE application to organize and manage assets and their metadata. 
+    \begin{list2}
+    \item Worked as part of a geographically distributed team using agile practices
+    \item Designed and implemented an enterprise build system around Maven, porting an existing heterogeneous build system from Ant and shell scripts to Maven
+    \item Implemented multiple performance and scalability improvements, resulting in substantial benefits deriving from better caching strategies and algorithms with more favorable CPU/Memory complexity characteristics.
+    \item Managed summer interns
+    \end{list2}
+  
+    %__________________________________________________________________________________________________________________
+    % Education
+    \section{\mysidestyle Education}
+
+    \textbf{Texas A\&M University}, College Station, TX \vspace{2mm}\\\vspace{1mm}%
+    \textsl{Masters of Science in Mathematics} \hfill \textbf{ Spring 2005}\vspace{-3mm}\\\vspace{-1mm}%
+    \begin{list2}
+        \item Emphasis in Computational Complexity and Theoretical Computer Science
+        \item Advised by Dr. J. Maurice Rojas
+    \end{list2}\vspace{-1.5mm}
+    
+    \textbf{University of Louisiana at Monroe}, Monroe, LA \vspace{2mm}\\\vspace{1mm}%
+    \textsl{Bachelors of Science in Mathematics and Computer Science} \hfill \textbf{ Spring 2002}\vspace{-3mm}\\\vspace{-1mm}%
+
+%__________________________________________________________________________________________________________________
+    % Publications
+    \section{\mysidestyle Selected Publications, Patents \& Talks}
+
+    J. Maurice Rojas, Frederic Bihan, and Casey Stella\\
+    ``Faster Real Feasibility via Circuit Discriminants'',\\
+    In \textsl{Proceedings of ISSAC 2009}, pp. 39-46, ACM Press, 2009.
+
+\vspace{-2mm}
+    ``New Complexity Thresholds for Sparse Real Polynomials'',\\
+    \textsl{Sixth International Joint Meeting of AMS and SMM}, Invited Talk
+
+    ``SYSTEM AND METHOD FOR USING AN EDITABLE LIFECYCLE EVENT DISTRIBUTION LIST WITH A SERVICE METADATA REPOSITORY'',\\
+    \textsl{Patent pending}, Application number 20100057769, Oracle Corporation
+    
+    %__________________________________________________________________________________________________________________
+    % Honours and Awards
+    \section{\mysidestyle Honors and\\Awards} 
+
+    Outstanding Teaching Assistant [2005]                                                           \vspace{1mm}\\
+    National Science Foundation VIGRE Fellowship [2004]                                             \vspace{1mm}\\
+    AUF \& Regents Fellowships for Oustanding Academic Achievement [2003]                           
+
+    %__________________________________________________________________________________________________________________
+    % Computer Skills
+    %\section{\mysidestyle Programming} 
+    %C, C++, Matlab, Linux shell scripting, Perl, Python, \LaTeXe, PBS, SQL, Java, .NET, SPSS.
+
+
+
+    %__________________________________________________________________________________________________________________
+    % Referees
+%    \section{\mysidestyle Referees} 
+%    {\sl Available on request.}
+
+
+
+
+%______________________________________________________________________________________________________________________
+\end{resume}
+\end{document}
+
+
+%______________________________________________________________________________________________________________________
+% EOF
+

@@ -48,7 +48,6 @@ Online Presence
 ====================================
 
 Other places where you might find my public opinions:
-
 <ul class="compact recent">
   <li><a href="http://twitter.com/casey_stella" title="Twitter">Twitter</a></li>
   <li><a href="https://github.com/cestella" title="Github">Github</a></li>
