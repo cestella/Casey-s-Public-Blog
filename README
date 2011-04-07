@@ -1,0 +1,8 @@
+Personal Homepage and Blog
+==========================
+
+This is my personal homepage and blog hosted on http://www.caseystella.com
+I use the Jekyll static blog generator system.  The layout is shamelessly 
+based on Mark Reid's jekyll layout.
+
+push.sh is intended to push the generated content to nearlyfreespeech.net
