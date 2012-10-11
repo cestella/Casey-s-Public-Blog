@@ -23,7 +23,7 @@ I mercilessly chase hard problems.
 
 I spent my formative years in [rural Louisiana](http://maps.google.com/maps?hl=en&client=ubuntu&channel=cs&q=Bastrop,+LA&ie=UTF8&hq=&hnear=Bastrop,+Morehouse,+Louisiana&gl=us&ll=32.754942,-91.870422&spn=1.436707,2.765808&t=h&z=9).
 Every time I think I've adjusted to the weather and culture, I find that I really don't
-understand some fundamental thing about my adopted home.  I live here with my [wife](http://facultyprofile.csuohio.edu/csufacultyprofile/detail.cfm?FacultyID=L_GOLD33), my son and my soon-to-be daughter.
+understand some fundamental thing about my adopted home.  I live here with my [wife](http://facultyprofile.csuohio.edu/csufacultyprofile/detail.cfm?FacultyID=L_GOLD33), my son and my daughter.
 I dig being a father and husband very much.
 
 My educational emphasis and current interests are in theoretical Computer Science and Mathematics.
