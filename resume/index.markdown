@@ -14,6 +14,7 @@ Contact Information
 ===================
 * Address: Available Upon Request
 * e-mail: [cestella@gmail.com](mailto:cestella@gmail.com)
+* github: http://github.com/cestella
 
 Purpose
 =======
@@ -38,6 +39,7 @@ of the Hadoop ecosystem.  I spend my days writing, debugging and analyzing the p
 * Experience with being a non-managerial technical lead; guiding and training
  junior engineers.
 * Devised and lead the implementation of a new architecture for more efficient data ingestion and processing.
+* Contributed much of the code in an open source offering from Explorys: http://github.com/ExplorysMedical/Apothecary
 
 ## Game Communication, Mayfield Heights OH
 
@@ -113,7 +115,7 @@ Selected Publications, Patents & Talks
   _Sixth International Joint Meeting of AMS and SMM_, Invited Talk
 
 * "SYSTEM AND METHOD FOR USING AN EDITABLE LIFECYCLE EVENT DISTRIBUTION LIST WITH A SERVICE METADATA REPOSITORY",
-  _Patent pending_, Application number 20100057769, Oracle Corporation
+  _Patent Issued March 27, 2012_, Patent number 8145680, Oracle Corporation
 
 Honors and Awards
 =================
