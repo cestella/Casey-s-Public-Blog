@@ -14,7 +14,7 @@ Contact Information
 ===================
 * Address: Available Upon Request
 * e-mail: [cestella@gmail.com](mailto:cestella@gmail.com)
-* github: http://github.com/cestella
+* github: [http://github.com/cestella]
 
 Purpose
 =======
@@ -39,7 +39,7 @@ of the Hadoop ecosystem.  I spend my days writing, debugging and analyzing the p
 * Experience with being a non-managerial technical lead; guiding and training
  junior engineers.
 * Devised and lead the implementation of a new architecture for more efficient data ingestion and processing.
-* Contributed much of the code in an open source offering from Explorys: http://github.com/ExplorysMedical/Apothecary
+* Contributed much of the code in our open source project: [http://github.com/ExplorysMedical/Apothecary]
 
 ## Game Communication, Mayfield Heights OH
 
