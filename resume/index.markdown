@@ -15,19 +15,29 @@ Contact Information
 * Address: Available Upon Request
 * e-mail: [cestella@gmail.com](mailto:cestella@gmail.com)
 
+Purpose
+=======
+I am a software engineer deeply interested in data mining and large scale data analysis.
+Nothing makes me happier than math, statistics, coding and distributed computing. 
+I mercilessly chase hard problems.
+
 Professional Experience
 =======================
 
 ##Explorys, Cleveland OH 
 
 ##Senior Engineer - January 2011 to Present
-
-Design and implement software to assist in the gathering, preprocessing
-and analysis of data from hospitals
+I am a senior software engineer on the platform team at Explorys. We are responsible for the creation, care and
+maintenance of the high performance indexing infrastructure.  This involves a deep understanding
+of the Hadoop ecosystem.  I spend my days writing, debugging and analyzing the performance of map reduce jobs.
 
 * Proficiency with modern natural language processing and general 
  machine learning techniques and approaches
-* Experience with Hadoop and HBase
+* Extensive experience with Hadoop and HBase, including multiple presentations about these technologies.
+* Experience with hands on data analysis and performing under pressure.
+* Experience with being a non-managerial technical lead; guiding and training
+ junior engineers.
+* Devised and lead the implementation of a new architecture for more efficient data ingestion and processing.
 
 ## Game Communication, Mayfield Heights OH
 
@@ -73,6 +83,11 @@ and manage assets and their metadata.
 * Designed and implemented an enterprise build system around Maven, porting an existing heterogeneous build system from Ant and shell scripts to Maven
 * Implemented multiple performance and scalability improvements, resulting in substantial benefits deriving from better caching strategies and algorithms with more favorable CPU/Memory complexity characteristics.
 * Managed summer interns
+
+Certifications
+==============
+* Cloudera Certified Hadoop Developer - August 2012
+* Cloudera Certified HBase Developer - August 2012
 
 Education
 =========
