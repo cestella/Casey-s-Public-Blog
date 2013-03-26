@@ -18,27 +18,43 @@ Contact Information
 
 Purpose
 =======
-I am a software engineer deeply interested in data mining and large scale data analysis.
+I am interested in data mining and large scale data analysis.
 Nothing makes me happier than math, statistics, coding and distributed computing. 
 I mercilessly chase hard problems.
 
 Professional Experience
 =======================
 
+##Hortonworks, San Jose CA
+
+##Systems Architect - November 2012 to Present
+I am a Systems Architect in the consulting services organization at Hortonworks.  I provide
+mentorship and guidance in operationalizing Hadoop and its ecosystem to solve business problems
+for our clients.  I work with our clients to reduce risk and time to market by providing expertise 
+in big data.
+
+* Provide proof-of-concepts to reduce engineering churn
+* Give extensive presentations about the Hadoop ecosystem, best practices, data architecture in Hadoop
+* Provide mentorship and guidance to other architects to help them become independent
+* Provide review and feedback for existing physical architecture, data architecture and individual code
+* Debug and solve issues with Hadoop as on-the-ground subject matter expert.  This could include everything from patching components to post-mortem analysis of errors.
+
 ##Explorys, Cleveland OH 
 
-##Senior Engineer - January 2011 to Present
-I am a senior software engineer on the platform team at Explorys. We are responsible for the creation, care and
-maintenance of the high performance indexing infrastructure.  This involves a deep understanding
-of the Hadoop ecosystem.  I spend my days writing, debugging and analyzing the performance of map reduce jobs.
+##Senior Engineer - January 2011 to November 2012
+I was a "big data" architect and, prior to that, a senior software engineer on the platform team at Explorys. 
+The team was responsible for the creation, care and maintenance of the high performance indexing infrastructure.
+My job required a deep understanding of the Hadoop ecosystem.  I designed the next generation data 
+architecture for the unstructured data at Explorys as well as writing, debugging, and analyzing the 
+performance of many map reduce jobs to realize that architecture.  
 
-* Proficiency with modern natural language processing and general 
- machine learning techniques and approaches
-* Extensive experience with Hadoop and HBase, including multiple presentations about these technologies.
+* Devised and lead the implementation of the next generation architecture for more efficient data ingestion and processing.
+* Proficiency with mentoring and on-boarding new engineers who are not proficient in Hadoop and getting them up to speed quickly.
+* Experience with being a technical lead of a team of engineers.
+* Proficiency with modern natural language processing and general machine learning techniques and approaches
+* Extensive experience with Hadoop and HBase, including multiple public presentations about these technologies.
 * Experience with hands on data analysis and performing under pressure.
-* Experience with being a non-managerial technical lead; guiding and training
- junior engineers.
-* Devised and lead the implementation of a new architecture for more efficient data ingestion and processing.
+* Designed and wrote a layer on top of MapReduce to make the task of writing MapReduce jobs easier and more safe for Junior Engineers.
 * Contributed much of the code in our [open source project](http://github.com/ExplorysMedical/Apothecary).
 
 ## Game Communication, Mayfield Heights OH
@@ -107,15 +123,18 @@ _Bachelors of Science in Mathematics and Computer Science_ - Spring 2002
 Selected Publications, Patents & Talks
 ======================================
 
+* "Fast Map Reduce over HBase",
+  _Strata/Hadoop World Apache HBase Meetup, NYC_, Invited Talk
+
+* "SYSTEM AND METHOD FOR USING AN EDITABLE LIFECYCLE EVENT DISTRIBUTION LIST WITH A SERVICE METADATA REPOSITORY",
+  _Patent Issued March 27, 2012_, Patent number 8145680, Oracle Corporation
+
 * J. Maurice Rojas, Frederic Bihan, and Casey Stella
     "[Faster Real Feasibility via Circuit Discriminants](/files/papers/faster_real_feasibility_via_circuit_discrimination.pdf)",
     In _Proceedings of ISSAC 2009_, pp. 39-46, ACM Press, 2009
 
 * "New Complexity Thresholds for Sparse Real Polynomials",
   _Sixth International Joint Meeting of AMS and SMM_, Invited Talk
-
-* "SYSTEM AND METHOD FOR USING AN EDITABLE LIFECYCLE EVENT DISTRIBUTION LIST WITH A SERVICE METADATA REPOSITORY",
-  _Patent Issued March 27, 2012_, Patent number 8145680, Oracle Corporation
 
 Honors and Awards
 =================
