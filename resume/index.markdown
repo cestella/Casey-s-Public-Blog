@@ -41,7 +41,7 @@ in big data.
 
 ##Explorys, Cleveland OH 
 
-##Senior Engineer - January 2011 to November 2012
+##"Big Data" Architect - January 2011 to November 2012
 I was a "big data" architect and, prior to that, a senior software engineer on the platform team at Explorys. 
 The team was responsible for the creation, care and maintenance of the high performance indexing infrastructure.
 My job required a deep understanding of the Hadoop ecosystem.  I designed the next generation data 
@@ -126,15 +126,15 @@ Selected Publications, Patents & Talks
 * "Fast Map Reduce over HBase",
   _Strata/Hadoop World Apache HBase Meetup, NYC_, Invited Talk
 
+* "New Complexity Thresholds for Sparse Real Polynomials",
+  _Sixth International Joint Meeting of AMS and SMM_, Invited Talk
+
 * "SYSTEM AND METHOD FOR USING AN EDITABLE LIFECYCLE EVENT DISTRIBUTION LIST WITH A SERVICE METADATA REPOSITORY",
   _Patent Issued March 27, 2012_, Patent number 8145680, Oracle Corporation
 
 * J. Maurice Rojas, Frederic Bihan, and Casey Stella
     "[Faster Real Feasibility via Circuit Discriminants](/files/papers/faster_real_feasibility_via_circuit_discrimination.pdf)",
     In _Proceedings of ISSAC 2009_, pp. 39-46, ACM Press, 2009
-
-* "New Complexity Thresholds for Sparse Real Polynomials",
-  _Sixth International Joint Meeting of AMS and SMM_, Invited Talk
 
 Honors and Awards
 =================
