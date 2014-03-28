@@ -18,17 +18,19 @@ Contact Information
 
 Purpose
 =======
-I am interested in data mining and large scale data analysis.
-Nothing makes me happier than math, statistics, coding and distributed computing. 
-I mercilessly chase hard problems.
+I focus on issues around data science and especially natural language processing
+at scale. I have domain knowledge in medical/clinical informatics and oil/gas 
+data analysis and signal processing at scale.
+
+Nothing makes me happier than math, statistics, coding and distributed computing.
 
 Professional Experience
 =======================
 
 ##Hortonworks, San Jose CA
 
-##Systems Architect - November 2012 to Present
-I am a Systems Architect in the consulting services organization at Hortonworks.  I provide
+##Principal Architect - November 2012 to Present
+As a Principal Architect in the consulting services organization at Hortonworks, I provide
 mentorship and guidance in operationalizing Hadoop and its ecosystem to solve business problems
 for our clients.  I work with our clients to reduce risk and time to market by providing expertise 
 in big data.
@@ -38,6 +40,8 @@ in big data.
 * Provide mentorship and guidance to other architects to help them become independent
 * Provide review and feedback for existing physical architecture, data architecture and individual code
 * Debug and solve issues with Hadoop as on-the-ground subject matter expert.  This could include everything from patching components to post-mortem analysis of errors.
+
+I focus on issues around data science and especially natural language processing at scale. I have domain knowledge in medical/clinical informatics and oil/gas data analysis and signal processing.
 
 ##Explorys, Cleveland OH 
 
