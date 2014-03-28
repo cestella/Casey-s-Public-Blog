@@ -19,8 +19,9 @@ About Me
 I have tended to specialize in writing software and solving problems
 where there are either scalability concerns due to large amounts of traffic
 or large amounts of data.  It makes a lot of sense, therefore, that I'm
-currently with [Hortonworks](http://www.hortonworks.com) as a Systems
-Architect.  I spend time with a variety of clients, large and small, mentoring and helping
+currently with [Hortonworks](http://www.hortonworks.com) as a Principal 
+Architect with a special focus on Data Science.  I spend time with a 
+variety of clients, large and small, mentoring and helping
 them use [Hadoop](http://hadoop.apache.org) to solve their problems.
 
 Before, I was very proud to work at [Explorys](http://www.explorys.com)
@@ -50,16 +51,8 @@ efficient distributed subsequence querying using [Dynamic Time Warping](https://
 +-- {.section}
 Blog
 =====
-I keep a technical [blog](/blog).
-Recent posts include:
-{% for post in site.categories.blog limit:3 %}
-<ul class="compact recent">
-<li>
-	<a href="{{ post.url }}" title="{{ post.excerpt }}">{{ post.title }}</a>
-	<span class="date">{{ post.date | date_to_string }}</span> 
-</li>
-</ul>
-{% endfor %}
+I keep a technical [blog](http://blog.caseystella.com).
+
 =--
 
 +-- {.section}
