@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Today's news!  All the news that's fit to byte.</title>
+   <meta name="author" content="Casey Stella" />
+  <link class="ui-theme" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/cupertino/jquery-ui.css">
+  <link class="ui-theme" rel="stylesheet" href="http://mottie.github.io/tablesorter/css/theme.jui.css">
+  <link class="theme" rel="stylesheet" href="http://mottie.github.io/tablesorter/css/theme.default.css">
+  <link class="theme" rel="stylesheet" href="squirt/font-awesome.css">
+  <link class="theme" rel="stylesheet" href="squirt/squirt.css">
+<style>
+body {
+  font: 11px sans-serif;
+}
+td {
+width: 80px;
+}
+li {
+  width:300px;
+  padding:2px;
+}
+.textcontent {
+    width: 850px;
+    height:500px;
+    float: left;
+    margin-bottom: 4px;
+ 
+}
+.textcontent:before {
+    clear: left;
+}
+
+.queue{
+  position: right;
+  float: left;
+  border: 1px solid #000;
+  background-color: #FFF;
+  border-radius: 5px;
+  padding:10px;
+  margin-bottom: 10px;
+  min-width:300px
+}
+.bordered{
+  border: 1px solid #000;
+  background-color: #FFF;
+  border-radius: 5px;
+  padding:10px;
+
+}
+  .tooltip {
+  position: absolute;
+  width: 300px;
+  height: 45px;
+  pointer-events: none;
+  border: 1px solid #000;
+  background-color: #FFF;
+  border-radius: 5px;
+  padding:10px;
+}
+.full_text {
+  display: none;
+}
+.dot {
+  stroke: #000;
+}
+.legend {
+  stroke: #000;
+}
+
+.brush {
+    fill: teal;
+    stroke: teal;
+    fill-opacity: 0.2;
+    stroke-opacity: 0.8;
+}
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
+</style>
+</head>
+<body id="" >
+
+<script type="text/javascript" src="presentation/presentation.json"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
+<script src="https://rawgit.com/square/crossfilter/master/crossfilter.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="http://mottie.github.io/tablesorter/js/jquery.tablesorter.js"></script>
+<script src="http://mottie.github.io/tablesorter/js/jquery.tablesorter.widgets.js"></script>
+<script src="http://mottie.github.io/tablesorter/js/widgets/widget-scroller.js"></script>
+<script>
+$(document).ready(function() 
+    { 
+
+      $("#resultTable").tablesorter( { 
+                            theme: "default" 
+                          , widthFixed: false 
+                          , showProcessing: true
+                          , widgets: ['zebra','uitheme', 'scroller']
+                          , widgetOptions : {
+                            scroller_height : 500,
+                            scroller_barWidth : 17,
+                            scroller_jumpToHeader: false,
+                            scroller_idPrefix : 's_'
+                            }
+
+                           }
+                          );
+
+     } 
+); 
+$(function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  });
+$(function() {
+  $( "#dialog" ).dialog();
+  });
+
+
+</script>
+
+<h1><center>Cronkite</center></h1>
+<h2><center>Way under the fold, son.</center></h2>
+<div style="width:2000px">
+<div class="textcontent">
+  <div id="chart" class="bordered">
+  </div>
+  <div id="table" style="width:1024px">
+      <table id="resultTable" class="tablesorter">
+          <thead>
+              <tr>
+                  <th style="width:300px">Title</th>
+                  <th style="width:300px">Group</th>
+                  <th style="width:300px">Summary</th>
+                  <th style="width:30px">Action</th>
+              </tr>
+          </thead>
+        <tbody id="result_body">
+        </tbody>
+      </table>
+  </div>
+</div>
+<div id="queue" class="queue">
+  <h2>Queue</h2>
+  <ul id="sortable">
+  </ul>
+  <br>
+<div id="divAudio_Player">
+ <audio id="audio_player">
+    <source id="audio_player_mp3" src="" type="audio/mpeg" />
+  </audio>
+</div>
+</div>
+</div>
+<div id="dialog" title="Welcome">
+  <p>Hi!  Welcome to Cronkite.  This is an experiment in alternative ways to consume news. </p>
+  <p>  
+    The plot is intended to provide insight as to how articles are grouped. Drag to select a few points
+    representing a group.  The colors are based around "topics" that were learned by looking at the articles.
+    These topic groupings should be viewed like sections of the newspaper, except divined from the data and a statistical model.
+  <p>In the table below, you'll see their summaries (automatically generated).  Enqueue them
+    to form a queue of stories to view later.</p>
+    <p>To speedread the article, click the <img title="speed read" src="speedread.png" width="10px" height="10px" /> next to the link in the queue.</p>
+    <p>The news sources currently pulled are the sections from google news and the first page of hackernews.  Note that data is pulled periodically, rather than at request time.</p>
+</div>
+<script>
+var width = 840,
+    height = 600,
+    margin = 0;
+
+var xScale = d3.scale.linear()
+               .range([0, width])
+  , xValue = function(d) { return d.embedding[0];} 
+  , xMap = function(d) { 
+      var x = xScale(xValue(d));
+      return x;
+    };
+var yScale = d3.scale.linear()
+                     .range([height, 0])
+  , yValue = function(d) { return d.embedding[1];} 
+  , yMap = function(d) { return yScale(yValue(d));};
+// setup fill color
+var cValue = function(d) { return get_topic(d);},
+    color = d3.scale.category10();
+
+
+function play(doc) {
+      var new_audio = 'presentation/mp3s/' + doc;
+
+      var source = '<audio id="audio_player" controls>';
+      source +=  '<source id="audio_player_mp3" src="' + new_audio + '.mp3"  type="audio/mpeg" />';
+      source +=  '</audio>';
+
+      $('#divAudio_Player').html(source);
+
+      var aud = $('#audio_player').get(0);
+      aud.play();
+    }
+
+function get_topic(d) {
+    var maxVal = 0;
+    var maxIdx = -1;
+    var t = d.topics;
+    for(var i = 0;i < t.length;++i)
+    {
+        if(t[i] > maxVal)
+        {
+            maxVal = t[i];
+            maxIdx = i;
+        }
+    }
+    return data.keywords[maxIdx];
+};
+function loadJsFile(filename ){
+    var fileref = document.createElement('script');
+    fileref.setAttribute("type","text/javascript");
+    fileref.setAttribute("src", filename);
+
+    if (typeof fileref!="undefined"){
+        document.getElementsByTagName("head")[0].appendChild(fileref);
+    }  
+}
+function update_list(event, key) {
+  var doc_text = event.target.parentElement.parentElement.childNodes[2].childNodes[1].innerHTML;
+  var titleNode = event.target.parentElement.parentElement.childNodes[0].childNodes[0].cloneNode(true);
+  var listElem = document.getElementById('sortable');
+  var li = document.createElement("li");
+  li.class = "ui-state-default";
+  
+  li.innerHTML = '<span class=\"ui-icon ui-icon-arrowthick-2-n-s\"></span><img title=\"Listen\" src=\"speaker.png\" width=\"15px\" height=\"15px\" onclick=\"play(\'' + key + '\');\"/><img title=\"speed read\" src=\"speedread.png\" width=\"15px\" height=\"15px\" onclick=\"readUrl(event);\"/> <a target=\'_blank\' href=\'' + titleNode.href + '\'>' + titleNode.innerHTML + '</a><div class=\"full_text text\">' + doc_text + '</div>';
+  listElem.appendChild(li);
+}
+
+function update_table(points) {
+    var tableDiv = document.getElementById('table');
+    while(tableDiv.firstChild) { 
+        tableDiv.removeChild(tableDiv.firstChild);
+    }
+    // create elements <table> and a <tbody>
+    var tbl     = document.createElement("table");
+    tbl.id = 'resultTable';
+    tbl.class = 'tablesorter';
+    var thead = document.createElement("thead");
+    var tr = document.createElement("tr");
+    {
+        var cell = document.createElement("th");
+        cell.style= "width:300px";
+        cell.innerHTML = 'Title';
+        tr.appendChild(cell);
+    }
+    {
+        var cell = document.createElement("th");
+        cell.style= "width:300px";
+        cell.innerHTML = 'Group';
+        tr.appendChild(cell); 
+    }
+    {
+        var cell = document.createElement("th");
+        cell.style= "width:300px";
+        cell.innerHTML = 'Summary';
+        tr.appendChild(cell); 
+    }
+    {
+        var cell = document.createElement("th");
+        cell.style= "width:30px";
+        cell.innerHTML = 'Action';
+        tr.appendChild(cell); 
+    }
+    thead.appendChild(tr);
+    tbl.appendChild(thead);
+    var tblBody = document.createElement("tbody");
+    for(var i = 0;i < points.length;++i)
+    {
+         // table row creation
+         var row = document.createElement("tr");
+         {
+             var cell = document.createElement("td");
+             cell.style= "width:300px";
+             var url = points[i].url;
+             var txt = '<a target=\'_blank\' href="' + url + '">' + points[i].title + '</a>';
+             cell.innerHTML = txt;
+             row.appendChild(cell);
+         }
+         {
+             var cell = document.createElement("td");    
+             cell.style = "width:300px";
+             var txt = '' + points[i].group+ '';
+             cell.innerHTML = txt; 
+             row.appendChild(cell);
+         }
+         /*{
+             var d = points[i];
+             var cell = document.createElement("td");
+             cell.style= "width:300px";
+             var txt = '';
+             var topic = get_topic(d);
+             for(var j = 0;j < topic.length;++j)
+             {
+                txt += topic[j] + ' ';
+                if(j > 0 && j % 2 == 0)
+                {
+                  txt += '<br/>';
+                }
+             }    
+             cell.innerHTML = txt;
+             row.appendChild(cell);
+         }*/
+         {
+             var cell = document.createElement("td");
+             cell.style= "width:300px";
+             var txt = '<div id=\"summary\">' + points[i].summary + '</div><div class=\"full_text\">' + points[i].content + '</div>';
+             cell.innerHTML = txt; 
+             row.appendChild(cell);
+         }
+         {
+             var cell = document.createElement("td");
+             cell.style= "width:30px";
+             var key = points[i].key
+             cell.innerHTML = "<input type=\"submit\" value=\"Enqueue\" onclick=\"update_list(event, \'" + key + "\' );\">"; 
+             row.appendChild(cell);
+         }
+
+        tblBody.appendChild(row);
+    }
+    
+    tbl.appendChild(tblBody);
+    tableDiv.appendChild(tbl);
+    $("#resultTable").tablesorter( { 
+                            theme: "default" 
+                          , widthFixed: false 
+                          , showProcessing: true
+                          , widgets: ['zebra','uitheme', 'scroller']
+                          , widgetOptions : {
+                            scroller_height : 500,
+                            scroller_barWidth : 17,
+                            scroller_jumpToHeader: false,
+                            scroller_idPrefix : 's_'
+                            }
+                          }
+                          );
+}
+// don't want dots overlapping axis, so add in buffer to data domain 
+xScale.domain([d3.min(data.headlines, xValue)-1, d3.max(data.headlines, xValue)+1]);
+yScale.domain([d3.min(data.headlines, yValue)-1, d3.max(data.headlines, yValue)+1]);
+
+var brush = d3.svg.brush()
+    .x(xScale)
+    .y(yScale);
+// add the tooltip area to the webpage
+var tooltip = d3.select("#chart").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+var svg = d3.select('#chart')
+    .append('svg')
+    .attr('width', width+2*margin)
+    .attr('height', height+2*margin)
+    .append('g')
+    .attr('transform', 'translate('+margin+','+margin+')');
+
+ svg.append('g')
+    .attr('class', 'brush')
+    .call(brush);
+
+var xf = crossfilter(data.headlines);
+var xDim = xf.dimension(xValue);
+var yDim = xf.dimension(yValue);
+
+brush.on('brush', function() {
+    var extent = brush.extent(),
+        xExtent = [extent[0][0], extent[1][0]],
+        yExtent = [extent[0][1], extent[1][1]];
+    xDim.filterRange(xExtent);
+    yDim.filterRange(yExtent);
+    update_table(xDim.top(Infinity));
+   // console.log(xDim.top(Infinity));
+   // updateDots();
+});
+
+function updateDots() {
+    var dots = svg.selectAll('.dot')
+        .data(xDim.top(Infinity));
+    
+    dots.enter().append('circle')
+        .attr('class', 'dot')
+        .attr('r', 3)
+        .attr('fill', function(d) { return color(cValue(d)); })
+        .on("mouseover", function(d) {
+          tooltip.transition()
+               .duration(200)
+               .style("opacity", .9);
+          tooltip.html("" + get_topic(d) + "<br>" + d.title + "</br>") 
+               .style("left", (d3.event.pageX + 5) + "px")
+               .style("top", (d3.event.pageY - 28) + "px");
+      })
+    ;
+    
+    dots
+        .attr('cx', xMap)
+        .attr('cy', yMap);
+    
+    dots.exit().remove();
+}
+function readUrl(event) {
+  window.readNode = event.target.parentElement;
+  if(window.sq){
+    window.sq.closed && window.document.dispatchEvent(new Event('squirt.again'));
+  } else {
+    window.sq = {};
+    window.sq.userId = 'beta-user';
+    s = document.createElement('script');
+    s.src = 'http://caseystella.com/cronkite/squirt/squirt.js';
+    s.s = window.location.search;
+    s.idx = s.s.indexOf('sq-dev');
+    if(s.idx != -1){
+      s.ampIdx = s.s.indexOf('&', s.idx);
+      s.host = s.s.substring(s.idx + 7, s.ampIdx == -1 ? s.s.length : s.ampIdx);
+      s.src = 'http://caseystella.com/cronkite/squirt/squirt.js';
+    }
+    document.body.appendChild(s);
+  }
+};
+updateDots();
+</script>
+
+</body>
